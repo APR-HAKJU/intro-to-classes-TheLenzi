@@ -3,14 +3,15 @@
 # Aktuell werden die Eigenschaften als separate Variablen definiert.
 # Definiere einen Konstruktor (__init__), um die Attribute zu initialisieren.
 class Haus:
-    pass
+    def __init__(self, quadratmeter, schlafzimmer, badezimmer):
+        self.quadratmeter = quadratmeter
+        self.schlafzimmer = schlafzimmer
+        self.badezimmer = badezimmer
+    
+haus_1 = Haus(quadratmeter = 120, schlafzimmer = 3, badezimmer = 2)
 
-haus1 = Haus()
-haus1.quadratmeter = 120
-haus1.schlafzimmer = 3
-haus1.badezimmer = 2
 
-print(f"Haus: {haus1.quadratmeter}m², {haus1.schlafzimmer} Schlafzimmer")
+print(f"Haus: {haus_1.quadratmeter}m², {haus_1.schlafzimmer} Schlafzimmer")
 
 # TODO: Aufgabe 2: Erstelle drei weitere Objekte der Klasse Haus mit unterschiedlichen Eigenschaften.
 
