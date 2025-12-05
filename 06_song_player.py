@@ -4,7 +4,7 @@
 Aufgabe:
 In dieser Übung lernst du:
 1. Wie man Klassen aus anderen Dateien importiert
-2. Dass Klassen eigene Datentypen sind
+2. Dass Klassen eigwene Datentypen sind
 
 Schritte:
 1. Importiere die Klasse Song aus dem File 05_song.py
@@ -37,12 +37,49 @@ Beide Songs haben denselben Datentyp: True
 # TODO: Importiere die Klasse Song aus 05_song
 # from 05_song import Song
 
+from song import Song
+song_1 = Song(titel="Africa", interpreten=["Toto"])
+song_1.zeige_info()
 
 # TODO: Erstelle verschiedene Variablen mit unterschiedlichen Datentypen
-# text = "Hallo"
-# zahl = 42
-# liste = [1, 2, 3]
+text = "Hallo"
+zahl = 42
+liste = [1, 2, 3]
 
+print(type(text))
+print(type(zahl))
+print(type(liste))
+print(type(song_1))
+
+
+class Laptop:
+    pass
+
+laptop_1 = Laptop()
+laptop_2 = Laptop()
+print(type(laptop_1))
+print(f"Datentype von Laptop 2: {type(laptop_2)}")
+
+song_2 = Song("Billie Jean", ["Michael Jackson"])
+print(f"Datentype von Song2: {type(song_2)}")
+
+
+liste_songs = [song_1, song_2]
+print(liste_songs[0].titel)
+print(liste_songs[0].zeige_info)
+print(liste_songs[0].interpreten)
+print(liste_songs[1].titel)
+print(liste_songs[0].interpret_hinzufügen("DJ Elion"))
+
+
+song_3 = Song(titel = "Fein", interpreten=["Travis Scott"])
+liste_songs.append(song_3)
+
+song_4 = Song("brick by brick", "Imagency")
+liste_songs.append(song_4)
+
+for song in liste_songs:
+    print(song.titel)
 
 # TODO: Erstelle 3 Song-Objekte mit Titeln und Interpreten deiner Wahl
 
