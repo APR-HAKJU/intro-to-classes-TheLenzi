@@ -33,16 +33,29 @@ class Auto:
     
     def zeige_info(self):
          print(f"{self.marke} {self.modell} hat Kilometerstand von {self.kilometerstand}")
+
+    def fahren(self):
+        self.kilometerstand = self.kilometerstand + 100
+        print(f"Gefahren! Neuer Stand: {self.kilometerstand} km")
         
 
 auto_1 = Auto("VW", "Golf", 50000)
 
 auto_1.zeige_info()
 
+
+
 auto_2 = Auto("Audi", "A3", 40000)
 
 auto_3 = Auto("BMW", "X6MF 96 Competition", 13)
 
+auto_1.fahren()
+auto_1.fahren()
+auto_2.fahren()
+auto_3.fahren()
+
+
+auto_1.zeige_info()
 
 
 # TODO: Erstelle ein Auto-Objekt (z.B. VW Golf mit 50000 km)
