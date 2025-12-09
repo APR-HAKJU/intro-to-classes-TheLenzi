@@ -22,27 +22,15 @@ class Artikel:
     def zeige_info(self):
         print(f"{self.Name}: {self.Preis} EUR")
 
-    """
-    Ein einzelner Artikel im Einkaufswagen.
-    
-    Attribute:
-    - name (str): Name des Artikels
-    - preis (float): Preis des Artikels
-    """
-    # TODO 1.1: Schreibe den Konstruktor __init__
-    # Parameter: self, name, preis
-    # Speichere name und preis als Attribute
-    pass
-    
-    # TODO 1.2: Schreibe die Methode zeige_info()
-    # Gibt aus: "- {name}: {preis} EUR"
-    pass
+
+neuerartikel = Artikel(Name="PS5 Controller", Preis=79.99 )
 
 
 # TODO 2: Erstelle die Klasse Einkaufswagen
 class Einkaufswagen:
-    def artikel(list):
-        pass
+    def __init__(self):
+        self.artikel = []
+
     """
     Ein Einkaufswagen der Artikel-Objekte verwaltet.
     
@@ -60,6 +48,12 @@ class Einkaufswagen:
     # Füge das Artikel-Objekt zur Liste hinzu
     # Gib aus: "✅ {artikel.name} hinzugefügt"
     pass
+
+    def hinzugügen(self,artikel):
+        self.artikel.append(artikel)
+        print(f"{artikel.name} hinzugefügt")
+
+
     
     # TODO 2.3: Schreibe die Methode gesamtpreis()
     # Keine Parameter außer self
@@ -84,11 +78,17 @@ class Einkaufswagen:
 # artikel1 = Artikel("Brot", 2.99)
 # artikel2 = Artikel("Milch", 1.49)
 # artikel3 = Artikel("Käse", 4.50)
-pass
+
+wagen = Einkaufswagen()
+
+
+artikel1 = Artikel("Brot", 2.99)
+artikel2 = Artikel("Milch", 1.49)
+artikel3 = Artikel("Käse", 4.50)
 
 # TODO 3.2: Erstelle einen Einkaufswagen
 # wagen = Einkaufswagen()
-pass
+wagen.hinzugügen(artikel1)
 
 # TODO 3.3: Füge die drei Artikel zum Wagen hinzu
 # wagen.hinzufuegen(artikel1)
